@@ -379,8 +379,7 @@ class LegacyApiRequest extends AbstractRequest implements Request, GroupManageme
         return [
             'Authorization' => 'key='.$this->getServerKey(),
             'Content-Type' => 'application/json',
-            'Content-Length' => '0',
-            'project_id' => $this->getSenderId(),
+            'Cache-Control' => 'no-cache',
         ];
     }
 
